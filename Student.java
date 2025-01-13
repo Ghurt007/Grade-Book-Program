@@ -1,0 +1,40 @@
+
+package util;
+
+
+public class Student {
+    private String firstName;
+    private String lastName;
+    private int pid;
+    private Grade grade;
+
+    public String getFirstName() {
+        return firstName;
+    }
+    public String getLastName() {
+        return lastName;
+    }
+    public int getPid() {
+        return pid;
+    }
+    public Grade getGrade() {
+        return grade;
+    }
+
+    public void setGrade(Grade grade) {
+        this.grade = grade;
+    }
+
+    public Student(String firstName, String lastName, int pid, String scoreString) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.pid = pid;
+        this.grade = new Grade(Integer.parseInt(scoreString));
+    }
+
+    public void setGrade(int score){
+        this.grade = new Grade(score);
+    }
+
+
+}
